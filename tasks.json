@@ -1,0 +1,35 @@
+{
+    "tasks": [
+        {
+            "type": "cppbuild",
+            "label": "C/C++: g++ 编译 super_mario",
+            "command": "D:\\msys2\\ucrt64\\bin\\g++.exe",
+            "args": [
+                "-fdiagnostics-color=always",
+                "-std=c++17",
+                "-O2",
+                "-Wall",
+                "-Wextra",
+                "-I${workspaceFolder}\\src",
+                "-ID:\\msys2\\ucrt64\\include\\ncurses",
+                "${workspaceFolder}\\src\\main.cpp",
+                "${workspaceFolder}\\src\\game.cpp",
+                "-o",
+                "${workspaceFolder}\\super_mario.exe",
+                "-lncursesw"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "detail": "编译整个 super_mario 项目 (MSYS2 ncursesw)"
+        }
+    ],
+    "version": "2.0.0"
+}
